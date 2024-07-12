@@ -327,6 +327,10 @@ require('lazy').setup({
       -- calling `setup` is optional for customization
       require('fzf-lua').setup {
         file_ignore_patterns = { '%.rbi$' },
+        winopts = {
+          win_height = 0.95,
+          win_width = 0.90,
+        },
       }
 
       vim.keymap.set('n', '<leader>sf', require('fzf-lua').files, { desc = '[S]earch [F]iles' })
